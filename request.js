@@ -29,16 +29,33 @@ class AirportReq {
   }
 }
 
-class ZoneReq {
+class FlightsReq {
   constructor() {
     this.core = new Core();
   }
-  async requestZone() {
-    const request = new APIRequest(this.core.zones_data_url);
+
+  async requestFlights(limit) {
+    const request = new APIRequest(`${this.core.real_time_flight_tracker_data_url}?limit=${limit}`);
     const response = await request.sendRequest();
     return response;
   }
 }
 
-module.exports = new ZoneReq();
-module.exports = new AirportReq();
+class FlightData {
+  constructor() {
+    this.core = new Core();
+  }
+
+  async requestFlightData(flightId) {
+    const request = new APIRequest(this.core.flight_data_url(flightId));
+    const response = await request.sendRequest();
+    return response;
+  }
+}
+
+
+module.exports = {
+  AirportReq,
+  FlightsReq,
+  FlightData
+}
