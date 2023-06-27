@@ -9,7 +9,6 @@
   "name": "fr24api",
   "version": "1.0.0",
   "main": "test.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +22,6 @@
     "url": "https://github.com/jonaskroedel/fr24api/issues"
   },
   "homepage": "https://github.com/jonaskroedel/fr24api#readme",
+  "devDependencies": {},
   "description": ""
 }

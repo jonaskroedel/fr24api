@@ -47,3 +47,5 @@ class Core {
     json_headers = { ...this.headers, accept: "application/json" };
     image_headers = { ...this.headers, accept: "image/gif, image/jpg, image/jpeg, image/png" };
 }
+
+module.exports = Core;
